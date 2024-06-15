@@ -9,19 +9,21 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var workoutHistory: UTType {
+        UTType(importedAs: "com.workouts-r-us.workout-history")
     }
 }
 
-struct OneRepMaxDocument: FileDocument {
-    var text: String
+struct WorkoutDocument: FileDocument {
+    var workouts : [Workout]
+    var history : [WorkoutHistory]
 
-    init(text: String = "Hello, world!") {
-        self.text = text
+    init() {
+        history = []
+        workouts = []
     }
-
-    static var readableContentTypes: [UTType] { [.exampleText] }
+    
+    static var readableContentTypes: [UTType] { [.workoutHistory] }
 
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,
@@ -29,11 +31,11 @@ struct OneRepMaxDocument: FileDocument {
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+        workouts = try Workout.decodeWorkouts(string)
+        history = WorkoutHistory.collateData(workouts)
     }
     
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = text.data(using: .utf8)!
-        return .init(regularFileWithContents: data)
+        fatalError("Writing not allowed")
     }
 }

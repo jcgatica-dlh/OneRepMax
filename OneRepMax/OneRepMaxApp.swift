@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct OneRepMaxApp: App {
+    @StateObject var coordinator = RootCoordinator()
+    
     var body: some Scene {
-        DocumentGroup(newDocument: OneRepMaxDocument()) { file in
-            ContentView(document: file.$document)
+        DocumentGroup(viewing: WorkoutDocument.self) { file in
+            coordinator.createRootView(file.document.history)
+                .sheet(item: $coordinator.fullScreenCover) { item in
+                    coordinator.displayFullScreen(item)
+                }
+
         }
     }
 }

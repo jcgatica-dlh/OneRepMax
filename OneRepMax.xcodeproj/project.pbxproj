@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C43475A72C1B84C500C7C557 /* OneRepMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */; };
-		C43475A92C1B84C500C7C557 /* OneRepMaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A82C1B84C500C7C557 /* OneRepMaxDocument.swift */; };
-		C43475AB2C1B84C500C7C557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475AA2C1B84C500C7C557 /* ContentView.swift */; };
+		C43475A92C1B84C500C7C557 /* WorkoutDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A82C1B84C500C7C557 /* WorkoutDocument.swift */; };
+		C43475AB2C1B84C500C7C557 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */; };
 		C43475AD2C1B84C600C7C557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43475AC2C1B84C600C7C557 /* Assets.xcassets */; };
 		C43475B02C1B84C600C7C557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43475AF2C1B84C600C7C557 /* Preview Assets.xcassets */; };
-		C43475BB2C1B84C600C7C557 /* OneRepMaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475BA2C1B84C600C7C557 /* OneRepMaxTests.swift */; };
+		C43475BB2C1B84C600C7C557 /* WorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475BA2C1B84C600C7C557 /* WorkoutTests.swift */; };
 		C43475C52C1B84C600C7C557 /* OneRepMaxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475C42C1B84C600C7C557 /* OneRepMaxUITests.swift */; };
 		C43475C72C1B84C600C7C557 /* OneRepMaxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475C62C1B84C600C7C557 /* OneRepMaxUITestsLaunchTests.swift */; };
+		C43475D42C1B915F00C7C557 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475D32C1B915F00C7C557 /* RootCoordinator.swift */; };
+		C43475D82C1B922A00C7C557 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475D72C1B922A00C7C557 /* Workout.swift */; };
+		C43475DA2C1BAD3100C7C557 /* WorkoutHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475D92C1BAD3100C7C557 /* WorkoutHistory.swift */; };
+		C43475DC2C1C87CD00C7C557 /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */; };
+		C43475DE2C1CD8A400C7C557 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475DD2C1CD8A400C7C557 /* WorkoutSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,16 +42,21 @@
 /* Begin PBXFileReference section */
 		C43475A32C1B84C500C7C557 /* OneRepMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRepMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxApp.swift; sourceTree = "<group>"; };
-		C43475A82C1B84C500C7C557 /* OneRepMaxDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxDocument.swift; sourceTree = "<group>"; };
-		C43475AA2C1B84C500C7C557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C43475A82C1B84C500C7C557 /* WorkoutDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDocument.swift; sourceTree = "<group>"; };
+		C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		C43475AC2C1B84C600C7C557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C43475AF2C1B84C600C7C557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C43475B12C1B84C600C7C557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43475B62C1B84C600C7C557 /* OneRepMaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneRepMaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C43475BA2C1B84C600C7C557 /* OneRepMaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxTests.swift; sourceTree = "<group>"; };
+		C43475BA2C1B84C600C7C557 /* WorkoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTests.swift; sourceTree = "<group>"; };
 		C43475C02C1B84C600C7C557 /* OneRepMaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneRepMaxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43475C42C1B84C600C7C557 /* OneRepMaxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxUITests.swift; sourceTree = "<group>"; };
 		C43475C62C1B84C600C7C557 /* OneRepMaxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C43475D32C1B915F00C7C557 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		C43475D72C1B922A00C7C557 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		C43475D92C1BAD3100C7C557 /* WorkoutHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistory.swift; sourceTree = "<group>"; };
+		C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
+		C43475DD2C1CD8A400C7C557 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,11 @@
 		C43475A52C1B84C500C7C557 /* OneRepMax */ = {
 			isa = PBXGroup;
 			children = (
+				C43475D62C1B91C600C7C557 /* View */,
+				C43475D52C1B91BE00C7C557 /* Model */,
 				C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */,
-				C43475A82C1B84C500C7C557 /* OneRepMaxDocument.swift */,
-				C43475AA2C1B84C500C7C557 /* ContentView.swift */,
+				C43475A82C1B84C500C7C557 /* WorkoutDocument.swift */,
+				C43475D32C1B915F00C7C557 /* RootCoordinator.swift */,
 				C43475AC2C1B84C600C7C557 /* Assets.xcassets */,
 				C43475B12C1B84C600C7C557 /* Info.plist */,
 				C43475AE2C1B84C600C7C557 /* Preview Content */,
@@ -118,7 +130,7 @@
 		C43475B92C1B84C600C7C557 /* OneRepMaxTests */ = {
 			isa = PBXGroup;
 			children = (
-				C43475BA2C1B84C600C7C557 /* OneRepMaxTests.swift */,
+				C43475BA2C1B84C600C7C557 /* WorkoutTests.swift */,
 			);
 			path = OneRepMaxTests;
 			sourceTree = "<group>";
@@ -130,6 +142,25 @@
 				C43475C62C1B84C600C7C557 /* OneRepMaxUITestsLaunchTests.swift */,
 			);
 			path = OneRepMaxUITests;
+			sourceTree = "<group>";
+		};
+		C43475D52C1B91BE00C7C557 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C43475D72C1B922A00C7C557 /* Workout.swift */,
+				C43475D92C1BAD3100C7C557 /* WorkoutHistory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C43475D62C1B91C600C7C557 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */,
+				C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */,
+				C43475DD2C1CD8A400C7C557 /* WorkoutSummaryView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C43475A92C1B84C500C7C557 /* OneRepMaxDocument.swift in Sources */,
+				C43475DA2C1BAD3100C7C557 /* WorkoutHistory.swift in Sources */,
+				C43475D42C1B915F00C7C557 /* RootCoordinator.swift in Sources */,
+				C43475A92C1B84C500C7C557 /* WorkoutDocument.swift in Sources */,
 				C43475A72C1B84C500C7C557 /* OneRepMaxApp.swift in Sources */,
-				C43475AB2C1B84C500C7C557 /* ContentView.swift in Sources */,
+				C43475D82C1B922A00C7C557 /* Workout.swift in Sources */,
+				C43475DC2C1C87CD00C7C557 /* WorkoutHistoryView.swift in Sources */,
+				C43475AB2C1B84C500C7C557 /* ExerciseListView.swift in Sources */,
+				C43475DE2C1CD8A400C7C557 /* WorkoutSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C43475BB2C1B84C600C7C557 /* OneRepMaxTests.swift in Sources */,
+				C43475BB2C1B84C600C7C557 /* WorkoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +468,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneRepMax/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "One Rep Max";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -442,7 +480,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcgatica.OneRepMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -463,6 +501,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneRepMax/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "One Rep Max";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -473,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcgatica.OneRepMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
