@@ -29,7 +29,19 @@ struct ExerciseListView: View {
 }
 
 #Preview {
+    struct TestProvider : HistoryProvider {
+        func importFile(fileURL: URL) async throws {
+
+        }
+        
+        func fetchHistory() async -> [WorkoutHistory] {
+            return [WorkoutHistory(name: "A", workouts: [Workout(date: .now, name: "A", reps: 3, weight: 40.0)])]
+        }
+        
+        
+    }
     let vm = ExerciseListView.ViewModel(coordinator: RootCoordinator(),
+                                        historyProvider: TestProvider(),
                                         exerciseList: [WorkoutHistory(name: "A", workouts: [Workout(date: .now, name: "A", reps: 3, weight: 40.0)])])
     return ExerciseListView(viewModel: vm)
 }

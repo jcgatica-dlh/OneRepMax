@@ -20,6 +20,7 @@ struct WelcomeView: View {
             } label: {
                 Label("Choose workout file", systemImage: "doc.circle")
             }
+            .font(.title)
             .alert(alertTitle, isPresented: $viewModel.showErrorAlert, actions: {
                 Button("OK") {
                     viewModel.errorAcknowledged()
@@ -27,26 +28,36 @@ struct WelcomeView: View {
             })
             .fileImporter(
                 isPresented: $viewModel.showImporter,
-                allowedContentTypes: [.plainText]
-            ) { result in
-                Task {
-                    await viewModel.processImportResponse(result)
-                }
-            }
+                allowedContentTypes: [.plainText],
+                onCompletion: scheduleImport(_:)
+            )
             
             if viewModel.fetching {
-                ProgressView {
-                    Text("Fetching")
-                }
-                .padding(70)
-                .background(Color("ProgressBackground"))
-                .cornerRadius(5.0)
+                LoadProgressView()
+                    .transition(.opacity)
             }
         }
+        .onOpenURL(perform: { url in
+            scheduleImport(.success(url))
+        })
         .navigationTitle("Welcome")
+    }
+    
+    func scheduleImport(_ result: Result<URL,any Error>) {
+        Task {
+            await viewModel.processImportResponse(result)
+        }
     }
 }
 
 #Preview {
-    WelcomeView(viewModel: WelcomeView.ViewModel(coordinator: RootCoordinator()))
+    struct TestProvider : HistoryProvider {
+        func importFile(fileURL: URL) async throws {
+        }
+        
+        func fetchHistory() async -> [WorkoutHistory] {
+            return [WorkoutHistory(name: "A", workouts: [Workout(date: .now, name: "A", reps: 3, weight: 40.0)])]
+        }
+    }
+    return WelcomeView(viewModel: WelcomeView.ViewModel(coordinator: RootCoordinator(), historyProvider: TestProvider()))
 }

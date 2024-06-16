@@ -32,7 +32,7 @@ struct WorkoutHistoryView : View {
                 AxisMarks(preset: .aligned,values: .automatic(desiredCount: 5)) { value in
                     AxisValueLabel {
                         if let date = value.as(Date.self) {
-                            Text(date, format: dateFormat(value))
+                            Text(date, format: dateFormat(value, resolution: viewModel.labelResolution))
                                 .foregroundStyle(labelColor(value))
                         }
                     }
@@ -44,10 +44,12 @@ struct WorkoutHistoryView : View {
         }
     }
     
-    func dateFormat(_ value: AxisValue) -> Date.FormatStyle {
-        return switch value.index {
-        case 0, value.count - 1: .dateTime.month().year()
-        default: .dateTime.month()
+    func dateFormat(_ value: AxisValue, resolution: LabelResolution) -> Date.FormatStyle {
+        return switch (resolution, value.index) {
+        case (.month, 0), (.month, value.count - 1): .dateTime.month().year()
+        case (.month, _):                            .dateTime.month()
+        case (.day, 0), (.day, value.count - 1):     .dateTime.month().day()
+        case (.day, _):                              .dateTime.day()
         }
     }
        

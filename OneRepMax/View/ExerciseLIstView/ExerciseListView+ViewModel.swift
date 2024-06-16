@@ -12,14 +12,16 @@ extension ExerciseListView {
     final class ViewModel : ObservableObject {
         @Published private(set) var exerciseList: [WorkoutHistory]
         private var coordinator: RootCoordinator
+        private var historyProvider: HistoryProvider
 
-        init(coordinator: RootCoordinator, exerciseList: [WorkoutHistory] = []) {
+        init(coordinator: RootCoordinator, historyProvider: HistoryProvider, exerciseList: [WorkoutHistory] = []) {
             self.coordinator = coordinator
             self.exerciseList = exerciseList
+            self.historyProvider = historyProvider
         }
         
         func start() async {
-            self.exerciseList = await HistoryService.shared.fetchHistory()
+            self.exerciseList = await historyProvider.fetchHistory()
         }
         
         func displayDetails(_ row: WorkoutHistory) {

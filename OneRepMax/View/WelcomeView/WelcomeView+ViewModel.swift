@@ -14,10 +14,12 @@ extension WelcomeView {
         @Published var showErrorAlert = false
         @Published var fetching = false
         
-        var coordinator : RootCoordinator
+        var coordinator: RootCoordinator
+        var historyProvider: HistoryProvider
         
-        init(coordinator: RootCoordinator) {
+        init(coordinator: RootCoordinator, historyProvider: HistoryProvider) {
             self.coordinator = coordinator
+            self.historyProvider = historyProvider
         }
 
         func showBrowser() {
@@ -29,12 +31,12 @@ extension WelcomeView {
             case .success(let file):
                 do {
                     fetching = true
-                    try await HistoryService.shared.importFile(fileURL: file)
-                    fetching = false
+                    try await historyProvider.importFile(fileURL: file)
+                    coordinator.pushPage(.exerciseView)
                 } catch {
                     showErrorAlert = true
                 }
-                coordinator.pushPage(.exerciseView)
+                fetching = false
             case .failure:
                 showErrorAlert = true
             }

@@ -12,7 +12,12 @@ enum HistoryError: Error {
     case fileNotAccessible
 }
 
-actor HistoryService {
+protocol HistoryProvider {
+    func importFile(fileURL: URL) async throws
+    func fetchHistory() async -> [WorkoutHistory]
+}
+
+actor HistoryService: HistoryProvider {
     static let shared = HistoryService()
     private var workouts = [Workout]()
     private var history = [WorkoutHistory]()
@@ -38,7 +43,7 @@ actor HistoryService {
         workouts = try Workout.decodeWorkouts(string)
         history = WorkoutHistory.collateData(workouts)
         
-        //try? await Task.sleep(for: .seconds(1))
+        try? await Task.sleep(for: .seconds(1))
     }
     
     func fetchHistory() -> [WorkoutHistory] {

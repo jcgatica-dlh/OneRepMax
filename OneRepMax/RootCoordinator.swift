@@ -16,7 +16,7 @@ enum Page: Hashable {
     func createView(coordinator: RootCoordinator) -> some View {
         switch self {
         case .exerciseView:
-            ExerciseListView(viewModel: ExerciseListView.ViewModel(coordinator: coordinator))
+            ExerciseListView(viewModel: ExerciseListView.ViewModel(coordinator: coordinator, historyProvider: HistoryService.shared))
         case .workoutHistory(let history):
             let viewModel = WorkoutHistoryView.ViewModel(coordinator: coordinator, history: history)
             WorkoutHistoryView(viewModel: viewModel)
@@ -29,7 +29,7 @@ final class RootCoordinator : ObservableObject {
     @Published var path = NavigationPath()
     
     func createRootView() -> some View {
-        WelcomeView(viewModel: WelcomeView.ViewModel(coordinator: self))
+        WelcomeView(viewModel: WelcomeView.ViewModel(coordinator: self, historyProvider: HistoryService.shared))
     }
     
     func createPage(_ page: Page) -> some View {
