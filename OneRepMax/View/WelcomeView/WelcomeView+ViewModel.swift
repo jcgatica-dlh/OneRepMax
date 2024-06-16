@@ -12,10 +12,10 @@ extension WelcomeView {
     final class ViewModel: ObservableObject {
         @Published var showImporter = false
         @Published var showErrorAlert = false
-        @Published var fetching = false
+        @Published private(set) var fetching = false
         
-        var coordinator: RootCoordinator
-        var historyProvider: HistoryProvider
+        private var coordinator: RootCoordinator
+        private var historyProvider: HistoryProvider
         
         init(coordinator: RootCoordinator, historyProvider: HistoryProvider) {
             self.coordinator = coordinator

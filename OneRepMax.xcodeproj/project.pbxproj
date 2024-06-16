@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C430711C2C1F87CC00F9E835 /* OneRepMaxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430711A2C1F87CC00F9E835 /* OneRepMaxUITests.swift */; };
+		C430711F2C1F89DF00F9E835 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C430711E2C1F89DF00F9E835 /* README.md */; };
 		C43475A72C1B84C500C7C557 /* OneRepMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */; };
 		C43475A92C1B84C500C7C557 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A82C1B84C500C7C557 /* HistoryService.swift */; };
 		C43475AB2C1B84C500C7C557 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		C430711A2C1F87CC00F9E835 /* OneRepMaxUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneRepMaxUITests.swift; sourceTree = "<group>"; };
+		C430711E2C1F89DF00F9E835 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C43475A32C1B84C500C7C557 /* OneRepMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRepMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxApp.swift; sourceTree = "<group>"; };
 		C43475A82C1B84C500C7C557 /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		C434759A2C1B84C500C7C557 = {
 			isa = PBXGroup;
 			children = (
+				C430711E2C1F89DF00F9E835 /* README.md */,
 				C43475A52C1B84C500C7C557 /* OneRepMax */,
 				C43475B92C1B84C600C7C557 /* OneRepMaxTests */,
 				C43475C32C1B84C600C7C557 /* OneRepMaxUITests */,
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C430711F2C1F89DF00F9E835 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
