@@ -1,14 +1,16 @@
-#FitBod One Rep Max and Charts Coding Assessment
+# FitBod One Rep Max and Charts Coding Assessment
 by Juan C Gatica
 
+## Build Notes
 Please note that this app pulls in the Swift Algorithms package using the Swift Package
 Manager, which is used in chunking the workout data by day (when displaying the chart)
 
+## Run Notes
 To actually run, you can either have text files already present on the device's Downloads
 folder, or you can drag a file onto the simulator.  Please note that if the application is
 already installed, the file will automatically be opened by the app.  To test the file
 browser, it looks like you have to make sure to uninstall the application before dragging
-files onto it.
+files onto the simulator.
 
 This application displays a welcome screen with a single button, which brings up
 a file browser.  As long as a text file with a .txt extension is present on the
@@ -26,5 +28,5 @@ of the exercise on a day, the application only draws the largest One Rep Max att
 for that day, as an attempt to clean up the graph.
 
 Also, although the design mock shows "Month/Day" and "Day" labels on the X axis, if the workout
-data spans more than three months, I adjust the X axis to report "Year/Month" and "Month" days.
-If it spans less than 3 months, I leave it at "Month/Day" and "Day"
+data spans more than three months, the X axis labels will be "Year/Month" and "Month".
+If the data spans less than 3 months, the labels remain at "Month/Day" and "Day".
