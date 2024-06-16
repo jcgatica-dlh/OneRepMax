@@ -12,12 +12,14 @@ struct OneRepMaxApp: App {
     @StateObject var coordinator = RootCoordinator()
     
     var body: some Scene {
-        DocumentGroup(viewing: WorkoutDocument.self) { file in
-            coordinator.createRootView(file.document.history)
-                .sheet(item: $coordinator.fullScreenCover) { item in
-                    coordinator.displayFullScreen(item)
-                }
-
+        WindowGroup {
+            NavigationStack(path: $coordinator.path) {
+                coordinator.createRootView()
+                    .navigationDestination(for: Page.self) { page in
+                        coordinator.createPage(page)
+                    }
+            }
+            .environmentObject(coordinator)
         }
     }
 }

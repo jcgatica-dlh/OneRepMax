@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C43475A72C1B84C500C7C557 /* OneRepMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */; };
-		C43475A92C1B84C500C7C557 /* WorkoutDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A82C1B84C500C7C557 /* WorkoutDocument.swift */; };
+		C43475A92C1B84C500C7C557 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A82C1B84C500C7C557 /* HistoryService.swift */; };
 		C43475AB2C1B84C500C7C557 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */; };
 		C43475AD2C1B84C600C7C557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43475AC2C1B84C600C7C557 /* Assets.xcassets */; };
 		C43475B02C1B84C600C7C557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43475AF2C1B84C600C7C557 /* Preview Assets.xcassets */; };
@@ -20,6 +20,11 @@
 		C43475DA2C1BAD3100C7C557 /* WorkoutHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475D92C1BAD3100C7C557 /* WorkoutHistory.swift */; };
 		C43475DC2C1C87CD00C7C557 /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */; };
 		C43475DE2C1CD8A400C7C557 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475DD2C1CD8A400C7C557 /* WorkoutSummaryView.swift */; };
+		C43475E02C1D4C2500C7C557 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475DF2C1D4C2500C7C557 /* WelcomeView.swift */; };
+		C43475E62C1DF8D500C7C557 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = C43475E52C1DF8D500C7C557 /* Algorithms */; };
+		C43475E92C1E271B00C7C557 /* ExerciseListView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475E82C1E271B00C7C557 /* ExerciseListView+ViewModel.swift */; };
+		C43475EC2C1E3EA400C7C557 /* WelcomeView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475EB2C1E3EA400C7C557 /* WelcomeView+ViewModel.swift */; };
+		C4B06D5D2C1E67A5009E6035 /* WorkoutHistoryView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B06D5C2C1E67A5009E6035 /* WorkoutHistoryView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +47,7 @@
 /* Begin PBXFileReference section */
 		C43475A32C1B84C500C7C557 /* OneRepMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRepMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxApp.swift; sourceTree = "<group>"; };
-		C43475A82C1B84C500C7C557 /* WorkoutDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDocument.swift; sourceTree = "<group>"; };
+		C43475A82C1B84C500C7C557 /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 		C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		C43475AC2C1B84C600C7C557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C43475AF2C1B84C600C7C557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,6 +62,10 @@
 		C43475D92C1BAD3100C7C557 /* WorkoutHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistory.swift; sourceTree = "<group>"; };
 		C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
 		C43475DD2C1CD8A400C7C557 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
+		C43475DF2C1D4C2500C7C557 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		C43475E82C1E271B00C7C557 /* ExerciseListView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseListView+ViewModel.swift"; sourceTree = "<group>"; };
+		C43475EB2C1E3EA400C7C557 /* WelcomeView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WelcomeView+ViewModel.swift"; sourceTree = "<group>"; };
+		C4B06D5C2C1E67A5009E6035 /* WorkoutHistoryView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutHistoryView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43475E62C1DF8D500C7C557 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +101,7 @@
 				C43475B92C1B84C600C7C557 /* OneRepMaxTests */,
 				C43475C32C1B84C600C7C557 /* OneRepMaxUITests */,
 				C43475A42C1B84C500C7C557 /* Products */,
+				C43475E42C1DF8D500C7C557 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,10 +118,10 @@
 		C43475A52C1B84C500C7C557 /* OneRepMax */ = {
 			isa = PBXGroup;
 			children = (
+				C4DB652F2C1F52A300922E74 /* Services */,
 				C43475D62C1B91C600C7C557 /* View */,
 				C43475D52C1B91BE00C7C557 /* Model */,
 				C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */,
-				C43475A82C1B84C500C7C557 /* WorkoutDocument.swift */,
 				C43475D32C1B915F00C7C557 /* RootCoordinator.swift */,
 				C43475AC2C1B84C600C7C557 /* Assets.xcassets */,
 				C43475B12C1B84C600C7C557 /* Info.plist */,
@@ -156,11 +167,54 @@
 		C43475D62C1B91C600C7C557 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */,
-				C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */,
+				C43475E72C1E26F500C7C557 /* ExerciseLIstView */,
+				C43475EA2C1E3E8F00C7C557 /* WelcomeView */,
+				C4B06D5B2C1E6780009E6035 /* WorkoutHistoryView */,
 				C43475DD2C1CD8A400C7C557 /* WorkoutSummaryView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C43475E42C1DF8D500C7C557 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C43475E72C1E26F500C7C557 /* ExerciseLIstView */ = {
+			isa = PBXGroup;
+			children = (
+				C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */,
+				C43475E82C1E271B00C7C557 /* ExerciseListView+ViewModel.swift */,
+			);
+			path = ExerciseLIstView;
+			sourceTree = "<group>";
+		};
+		C43475EA2C1E3E8F00C7C557 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C43475DF2C1D4C2500C7C557 /* WelcomeView.swift */,
+				C43475EB2C1E3EA400C7C557 /* WelcomeView+ViewModel.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		C4B06D5B2C1E6780009E6035 /* WorkoutHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				C43475DB2C1C87CD00C7C557 /* WorkoutHistoryView.swift */,
+				C4B06D5C2C1E67A5009E6035 /* WorkoutHistoryView+ViewModel.swift */,
+			);
+			path = WorkoutHistoryView;
+			sourceTree = "<group>";
+		};
+		C4DB652F2C1F52A300922E74 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C43475A82C1B84C500C7C557 /* HistoryService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +231,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				C43475E32C1DF52100C7C557 /* PBXTargetDependency */,
 			);
 			name = OneRepMax;
+			packageProductDependencies = (
+				C43475E52C1DF8D500C7C557 /* Algorithms */,
+			);
 			productName = OneRepMax;
 			productReference = C43475A32C1B84C500C7C557 /* OneRepMax.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +309,9 @@
 				Base,
 			);
 			mainGroup = C434759A2C1B84C500C7C557;
+			packageReferences = (
+				C43475E12C1DF0C600C7C557 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = C43475A42C1B84C500C7C557 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,11 +354,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43475E92C1E271B00C7C557 /* ExerciseListView+ViewModel.swift in Sources */,
 				C43475DA2C1BAD3100C7C557 /* WorkoutHistory.swift in Sources */,
+				C43475EC2C1E3EA400C7C557 /* WelcomeView+ViewModel.swift in Sources */,
 				C43475D42C1B915F00C7C557 /* RootCoordinator.swift in Sources */,
-				C43475A92C1B84C500C7C557 /* WorkoutDocument.swift in Sources */,
+				C43475A92C1B84C500C7C557 /* HistoryService.swift in Sources */,
 				C43475A72C1B84C500C7C557 /* OneRepMaxApp.swift in Sources */,
+				C43475E02C1D4C2500C7C557 /* WelcomeView.swift in Sources */,
 				C43475D82C1B922A00C7C557 /* Workout.swift in Sources */,
+				C4B06D5D2C1E67A5009E6035 /* WorkoutHistoryView+ViewModel.swift in Sources */,
 				C43475DC2C1C87CD00C7C557 /* WorkoutHistoryView.swift in Sources */,
 				C43475AB2C1B84C500C7C557 /* ExerciseListView.swift in Sources */,
 				C43475DE2C1CD8A400C7C557 /* WorkoutSummaryView.swift in Sources */,
@@ -333,6 +398,10 @@
 			isa = PBXTargetDependency;
 			target = C43475A22C1B84C500C7C557 /* OneRepMax */;
 			targetProxy = C43475C12C1B84C600C7C557 /* PBXContainerItemProxy */;
+		};
+		C43475E32C1DF52100C7C557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C43475E22C1DF52100C7C557 /* Algorithms */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,6 +707,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C43475E12C1DF0C600C7C557 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C43475E22C1DF52100C7C557 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C43475E12C1DF0C600C7C557 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		C43475E52C1DF8D500C7C557 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C43475E12C1DF0C600C7C557 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C434759B2C1B84C500C7C557 /* Project object */;
 }

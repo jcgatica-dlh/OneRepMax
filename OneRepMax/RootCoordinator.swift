@@ -7,23 +7,36 @@
 
 import SwiftUI
 
-class RootCoordinator : ObservableObject {
-    @Published var fullScreenCover : WorkoutHistory?
+@MainActor
+enum Page: Hashable {
+    case exerciseView
+    case workoutHistory(WorkoutHistory)
     
-    func createRootView(_ history: [WorkoutHistory]) -> some  View {
-        print("Coordinator: \(Unmanaged.passUnretained(self).toOpaque()) creating root view")
-
-        return ExerciseListView(history: history) {
-            self.fullScreenCover = $0
+    @ViewBuilder
+    func createView(coordinator: RootCoordinator) -> some View {
+        switch self {
+        case .exerciseView:
+            ExerciseListView(viewModel: ExerciseListView.ViewModel(coordinator: coordinator))
+        case .workoutHistory(let history):
+            let viewModel = WorkoutHistoryView.ViewModel(coordinator: coordinator, history: history)
+            WorkoutHistoryView(viewModel: viewModel)
         }
     }
+}
+
+@MainActor
+final class RootCoordinator : ObservableObject {
+    @Published var path = NavigationPath()
     
-    func displayFullScreen(_ history: WorkoutHistory) -> some View {
-        print("Coordinator: \(Unmanaged.passUnretained(self).toOpaque()) displaying full screen")
-        print(history.workouts.map { "\($0)" }.joined(separator: "\n"))
-        return NavigationStack {
-            WorkoutHistoryView(history: history)
-                .navigationTitle(history.name)
-        }
+    func createRootView() -> some View {
+        WelcomeView(viewModel: WelcomeView.ViewModel(coordinator: self))
+    }
+    
+    func createPage(_ page: Page) -> some View {
+        return page.createView(coordinator: self)
+    }
+    
+    func pushPage(_ page: Page) {
+        path.append(page)
     }
 }
