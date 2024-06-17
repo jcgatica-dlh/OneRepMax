@@ -8,7 +8,7 @@
 import Foundation
 
 struct Workout : Hashable, CustomDebugStringConvertible {
-    static var debugFormatter = { () -> DateFormatter in
+    static let debugFormatter = { () -> DateFormatter in
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         return dateFormatter

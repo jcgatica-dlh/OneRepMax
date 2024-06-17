@@ -14,8 +14,8 @@ extension WelcomeView {
         @Published var showErrorAlert = false
         @Published private(set) var fetching = false
         
-        private var coordinator: RootCoordinator
-        private var historyProvider: HistoryProvider
+        private let coordinator: RootCoordinator
+        private let historyProvider: HistoryProvider
         
         init(coordinator: RootCoordinator, historyProvider: HistoryProvider) {
             self.coordinator = coordinator

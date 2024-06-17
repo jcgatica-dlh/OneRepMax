@@ -11,8 +11,8 @@ extension ExerciseListView {
     @MainActor
     final class ViewModel : ObservableObject {
         @Published private(set) var exerciseList: [WorkoutHistory]
-        private var coordinator: RootCoordinator
-        private var historyProvider: HistoryProvider
+        private let coordinator: RootCoordinator
+        private let historyProvider: HistoryProvider
 
         init(coordinator: RootCoordinator, historyProvider: HistoryProvider, exerciseList: [WorkoutHistory] = []) {
             self.coordinator = coordinator

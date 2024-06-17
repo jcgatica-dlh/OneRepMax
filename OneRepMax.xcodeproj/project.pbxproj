@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C430711C2C1F87CC00F9E835 /* OneRepMaxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430711A2C1F87CC00F9E835 /* OneRepMaxUITests.swift */; };
 		C430711F2C1F89DF00F9E835 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C430711E2C1F89DF00F9E835 /* README.md */; };
+		C43071212C20CC4000F9E835 /* WorkoutHistoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43071202C20CC4000F9E835 /* WorkoutHistoryViewModelTests.swift */; };
 		C43475A72C1B84C500C7C557 /* OneRepMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */; };
 		C43475A92C1B84C500C7C557 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475A82C1B84C500C7C557 /* HistoryService.swift */; };
 		C43475AB2C1B84C500C7C557 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43475AA2C1B84C500C7C557 /* ExerciseListView.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		C430711A2C1F87CC00F9E835 /* OneRepMaxUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneRepMaxUITests.swift; sourceTree = "<group>"; };
 		C430711E2C1F89DF00F9E835 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C43071202C20CC4000F9E835 /* WorkoutHistoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryViewModelTests.swift; sourceTree = "<group>"; };
 		C43475A32C1B84C500C7C557 /* OneRepMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneRepMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43475A62C1B84C500C7C557 /* OneRepMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRepMaxApp.swift; sourceTree = "<group>"; };
 		C43475A82C1B84C500C7C557 /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				C43475BA2C1B84C600C7C557 /* WorkoutTests.swift */,
 				C4DB65322C1F84B400922E74 /* WorkoutHistoryTests.swift */,
+				C43071202C20CC4000F9E835 /* WorkoutHistoryViewModelTests.swift */,
 			);
 			path = OneRepMaxTests;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4DB65332C1F84B400922E74 /* WorkoutHistoryTests.swift in Sources */,
+				C43071212C20CC4000F9E835 /* WorkoutHistoryViewModelTests.swift in Sources */,
 				C43475BB2C1B84C600C7C557 /* WorkoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcgatica.OneRepMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -595,6 +600,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcgatica.OneRepMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
