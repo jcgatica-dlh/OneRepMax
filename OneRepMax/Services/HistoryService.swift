@@ -12,7 +12,7 @@ enum HistoryError: Error {
     case fileNotAccessible
 }
 
-protocol HistoryProvider {
+protocol HistoryProvider : Actor {
     func importFile(fileURL: URL) async throws
     func fetchHistory() async -> [WorkoutHistory]
 }

@@ -51,7 +51,7 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    struct TestProvider : HistoryProvider {
+    actor TestProvider : HistoryProvider {
         func importFile(fileURL: URL) async throws {
         }
         
